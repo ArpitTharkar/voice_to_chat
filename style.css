@@ -1,0 +1,86 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f0f4f8;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #1e3a8a;
+  }
+  
+  .controls {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  button {
+    margin: 0 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #2563eb;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #1e40af;
+  }
+  
+  #status {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #111827;
+  }
+  
+  #wave-container {
+    margin-top: 20px;
+    height: 10px;
+    width: 100%;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;  /* Initially hidden */
+  }
+  
+  #wave {
+    height: 100%;
+    width: 0;
+    background-color: #2563eb;
+    animation: waveAnimation 1s linear infinite;
+  }
+  
+  #wave-container.active {
+    display: block;  /* Show when active */
+  }
+  
+  @keyframes waveAnimation {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
